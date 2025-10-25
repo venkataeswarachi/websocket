@@ -1,38 +1,174 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* General layout */
+.app-container {
   min-height: 100vh;
+  background-color: #20033e;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1.5rem;
+  font-family: Arial, sans-serif;
+  color: #e0e0e0;
+}
+
+/* Join room form */
+.join-room {
+  background-color: #1f1f1f;
+  flex-direction: column;
+  padding: 1.8rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  width: 24rem;
+}
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+  .join-button {
+    background-color: #1471eb;
+    box-shadow: inset;
+    
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    color: white;
+    cursor: pointer;
+    
+
+  }
+  .join-button:hover {
+      background-color: #0a4ebd;
+    }
+  .create-button {
+    background-color: #10b981;
+    box-shadow: inset;
+    
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    color: white;
+    cursor: pointer;
+  }
+  .create-button:hover {
+      background-color: #056f4e;
+    }
+
+
+.join-room h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #f2ebeb;
+}
+
+.join-room input {
+  width: 95%;
+  padding: 0.5rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid #444;
+  border-radius: 0.25rem;
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+}
+
+.join-room input::placeholder {
+  color: #888;
+}
+
+
+
+
+/* Chat room container */
+.chat-room {
+  background-color: #1f1f1f;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  width: 100%;
+  max-width: 36rem;
+}
+.roomid {
+ font: size 1rem;
+ font-weight: 150;
+ 
+}
+.chat-room h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.messages-container {
+  height: 20rem;
+  overflow-y: auto;
+  border: 1px solid #444;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-radius: 0.25rem;
+  background-color: #2c2c2c;
+}
+
+.message {
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.message-right {
+  text-align: right;
+}
+
+.message-left {
+  text-align: left;
+}
+
+.message span {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.message-right span {
+  background-color: #3bbbf6;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.message-left span {
+  background-color: #5b5c57;
+  color: #e0e0e0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Message input */
+.message-input-container {
+  display: flex;
+}
+
+.message-input-container input {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border: 1px solid #444;
+  border-radius: 0.25rem 0 0 0.25rem;
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+}
+
+.message-input-container input::placeholder {
+  color: #888;
+}
+
+.message-input-container button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0 0.25rem 0.25rem 0;
+  background-color: #10b981;
+  color: white;
+  cursor: pointer;
+}
+
+.message-input-container button:hover {
+  background-color: #059669;
 }
